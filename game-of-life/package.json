@@ -1,5 +1,5 @@
 {
-  "homepage" : "https://annebrandes.github.io/game-of-life",
+  "homepage": "https://annebrandes.github.io/game-of-life",
   "name": "game-of-life",
   "version": "0.1.0",
   "private": true,
@@ -37,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

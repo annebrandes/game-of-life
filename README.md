@@ -11,4 +11,7 @@ To use this repo either:
 1. Clone the repo and use `npm start`
 2. Follow this link: https://annebrandes.github.io/game-of-life/
 
-
+Future improvements:
+- Adding choice for n-dimensional grid
+- Adding choice for n-millisecond transitions
+- Adding bespoke configurations including beacon, pulsar, and penta-decathlon 

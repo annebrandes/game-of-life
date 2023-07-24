@@ -13,8 +13,39 @@ const Grid = ({ size = 20 }) => {
 
     const handleGame = () => {
         const newGridState = [...gridState];
+    
+        const countLiveNeighbors = (i, j) => {
+            let count = 0;
+            const neighbors = [
+                [i - 1, j - 1], [i - 1, j], [i - 1, j + 1],
+                [i, j - 1],                 [i, j + 1],
+                [i + 1, j - 1], [i + 1, j], [i + 1, j + 1]
+            ];
+            for (const [x, y] of neighbors) {
+                if (x >= 0 && x < size && y >= 0 && y < size && gridState[x][y] === 'active') {
+                    count++;
+                }
+            }
+            return count;
+        };
+    
+        for (let i = 0; i < size; i++) {
+            for (let j = 0; j < size; j++) {
+                const liveNeighbors = countLiveNeighbors(i, j);
+                if (gridState[i][j] === 'active') {
+                    if (liveNeighbors < 2 || liveNeighbors > 3) {
+                        newGridState[i][j] = 'inactive';
+                    }
+                } else {
+                    if (liveNeighbors === 3) {
+                        newGridState[i][j] = 'active';
+                    }
+                }
+            }
+        }
+    
         setGridState(newGridState);
-    }
+    };
 
     return (
         <>

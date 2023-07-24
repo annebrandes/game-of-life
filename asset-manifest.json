@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/game-of-life/static/css/main.144d5877.css",
+    "main.js": "/game-of-life/static/js/main.690a0b42.js",
+    "static/js/787.7ebe7c37.chunk.js": "/game-of-life/static/js/787.7ebe7c37.chunk.js",
+    "static/media/LibreBaskerville-Bold.ttf": "/game-of-life/static/media/LibreBaskerville-Bold.6e5f70731aeed7c6e895.ttf",
+    "static/media/LibreBaskerville-Regular.ttf": "/game-of-life/static/media/LibreBaskerville-Regular.715e9cea90f54d5a4093.ttf",
+    "index.html": "/game-of-life/index.html",
+    "main.144d5877.css.map": "/game-of-life/static/css/main.144d5877.css.map",
+    "main.690a0b42.js.map": "/game-of-life/static/js/main.690a0b42.js.map",
+    "787.7ebe7c37.chunk.js.map": "/game-of-life/static/js/787.7ebe7c37.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.144d5877.css",
+    "static/js/main.690a0b42.js"
+  ]
+}

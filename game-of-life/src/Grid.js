@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Grid.css';
 
 const Grid = ({ size = 20 }) => {
     const initialGridState = Array(size).fill().map(() => Array(size).fill('inactive'));
     const [gridState, setGridState] = useState(initialGridState);
+    const [gameInterval, setGameInterval] = useState(null); 
 
     const handleCellClick = (i, j) => {
         const newGridState = [...gridState];
@@ -17,9 +18,7 @@ const Grid = ({ size = 20 }) => {
         const countLiveNeighbors = (i, j) => {
             let count = 0;
             const neighbors = [
-                [i - 1, j - 1], [i - 1, j], [i - 1, j + 1],
-                [i, j - 1],                 [i, j + 1],
-                [i + 1, j - 1], [i + 1, j], [i + 1, j + 1]
+                [i - 1, j - 1], [i - 1, j], [i - 1, j + 1], [i, j - 1], [i, j + 1], [i + 1, j - 1], [i + 1, j], [i + 1, j + 1]
             ];
             for (const [x, y] of neighbors) {
                 if (x >= 0 && x < size && y >= 0 && y < size && gridState[x][y] === 'active') {
@@ -46,6 +45,23 @@ const Grid = ({ size = 20 }) => {
     
         setGridState(newGridState);
     };
+    
+    const handlePerpetualGame = () => {
+        if (!gameInterval) {
+            const interval = setInterval(() => {
+                handleGame();
+            }, 1000);
+            setGameInterval(interval); 
+        }
+    };
+
+    useEffect(() => {
+        return () => {
+            if (gameInterval) {
+                clearInterval(gameInterval);
+            }
+        }
+    }, [gameInterval]);
 
     return (
         <>
@@ -62,7 +78,7 @@ const Grid = ({ size = 20 }) => {
                     </div>
                 ))}
                 <br />
-                <button className = "start" onClick = {() => handleGame()}> Start </button>
+                <button className = "start" onClick = {() => handlePerpetualGame()}> Start </button>
                 <br />
             </div>
         </>

@@ -5,6 +5,19 @@
 
 .App {
   text-align: center;
+  color: white;
   font-family: Libre;
   font-size: 25px;
+  padding-top: 30px;
+  background-color: black;
+}
+
+.Credits {
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+.Credits a {
+  color: white;
+  text-decoration: none;
 }

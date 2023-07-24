@@ -17,12 +17,15 @@
   padding-bottom: 40px;
 }
 
+
 .Credits a {
   color: white;
   text-decoration: none;
 }
 
-.Author {
+.Instructions {
+  text-align: center;
   font-family: Libre;
-  justify-content: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

@@ -50,7 +50,7 @@ const Grid = ({ size = 20 }) => {
         if (!gameInterval) {
             const interval = setInterval(() => {
                 handleGame();
-            }, 1000);
+            }, 50);
             setGameInterval(interval); 
         }
     };
@@ -62,6 +62,15 @@ const Grid = ({ size = 20 }) => {
             }
         }
     }, [gameInterval]);
+
+    const handlePerpetualHaltGame = () => {
+        if (gameInterval) {
+            clearInterval(gameInterval);
+            setGameInterval(null);
+            const newGridState = [...gridState];
+            setGridState(newGridState);
+        }
+    };
 
     return (
         <>
@@ -78,7 +87,10 @@ const Grid = ({ size = 20 }) => {
                     </div>
                 ))}
                 <br />
-                <button className = "start" onClick = {() => handlePerpetualGame()}> Start </button>
+                <div className = "button-container">
+                    <button className = "start" onClick = {() => handlePerpetualGame()}> Start </button>
+                    <button className = "start" onClick = {() => handlePerpetualHaltGame()}> Stop </button>
+                </div>
                 <br />
             </div>
         </>

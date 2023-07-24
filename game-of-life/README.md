@@ -9,6 +9,6 @@ From a starting configuration of active and inactive cells, the game will evolve
 
 To use this repo, either: 
 1. Clone the repo and use `npm start`
-2. Follow this link: [link]
+2. Follow this link: https://annebrandes.github.io/game-of-life/
 
 

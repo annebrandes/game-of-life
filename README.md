@@ -11,4 +11,4 @@ To use this repo, either:
 1. Clone the repo and use `npm start`
 2. Follow this link: [link]
 
-Built with [Create React App]([url](https://create-react-app.dev/)https://create-react-app.dev/).
+Built with [Create React App]([url](https://create-react-app.dev/)https://create-react-app.dev/)

@@ -13,5 +13,5 @@ Future improvements:
 - Adding bespoke configurations including beacon, pulsar, and penta-decathlon 
 
 To run repo: 
-- Access [Github Pages ]([url](https://annebrandes.github.io/game-of-life/)https://annebrandes.github.io/game-of-life/)
+- Access [Github Pages ](https://annebrandes.github.io/game-of-life/)
 - Download repo and run `npm start`

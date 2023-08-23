@@ -14,4 +14,4 @@ Future improvements:
 
 To run repo: 
 - Access [Github Pages ](https://annebrandes.github.io/game-of-life/)
-- Download repo and run `npm start`
+- Download and run `npm start`
